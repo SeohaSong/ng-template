@@ -30,13 +30,12 @@ mv $1 $1'.client'
 
 echo \
 "
-cd \$(ls | grep .client)\\
+cd $1.client\\
 && mv dist dist_\\
 && npm run build:prerender\\
-&& app_name=\\
-&& mv dist_//.git dist/\\
+&& mv dist_/$1/.git dist/$1\\
 && rm -rf dist_\\
-&& cd dist/\\
+&& cd dist/$1\\
 && (git add .; git commit -m 'update origin master'; git push origin master)
 " > build-client.sh
 
