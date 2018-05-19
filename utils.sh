@@ -23,19 +23,19 @@ cd $1
 
 }
 
+
 web-build(){
 
-mv dist dist_
-npm run build:prerender
-app_name=$(echo $(ls dist) | cut -d " " -f 1)
-mv dist_/$app_name/.git dist/$app_name
-rm -rf dist_
-
-(
-cd dist/$app_name
-git add .
-git commit -m "update to origin master"
-git push origin master
+mv dist dist_\
+&& npm run build:prerender\
+&& app_name=$(echo $(ls dist) | cut -d " " -f 1)\
+&& mv dist_/$app_name/.git dist/$app_name\
+&& rm -rf dist_\
+&& (
+cd dist/$app_name\
+&& git add .\
+&& git commit -m "update to origin master"\
+&& git push origin master
 )
 
 }
