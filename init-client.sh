@@ -22,7 +22,7 @@ cat client-template/webpack.server.config.js > $1/webpack.server.config.js
 sed "s/APP_NAME/$1/g" client-template/package.json > $1/package.json
 cat client-template/static.paths.ts > $1/static.paths.ts
 
-rm -rf .git READNE.md client-template
+rm -rf .git README.md client-template
 cd ..
 mv web-template $1
 cd $1
