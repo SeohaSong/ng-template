@@ -21,7 +21,6 @@ sed "s/APP_NAME/$1/g" client-template/prerender.ts > $1/prerender.ts
 cat client-template/webpack.server.config.js > $1/webpack.server.config.js
 sed "s/APP_NAME/$1/g" client-template/package.json > $1/package.json
 cat client-template/static.paths.ts > $1/static.paths.ts
-cd $1
 
 rm -rf .git READNE.md client-template
 cd ..
