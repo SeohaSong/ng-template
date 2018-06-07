@@ -36,9 +36,9 @@
     && rm -rf dist_\\
     && cd dist/$1\\
     && (git add .; git commit -m 'update origin master'; git push origin master)
-    " > build-client.sh
+    " > build.sh
 
-    rm -rf init-client.sh
+    rm -rf init.sh
 
     fi
 )
